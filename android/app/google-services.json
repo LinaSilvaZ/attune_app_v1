@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "394398775560",
+    "project_id": "attuneapp-c90fc",
+    "storage_bucket": "attuneapp-c90fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394398775560:android:20f74e35a244ebcab014bd",
+        "android_client_info": {
+          "package_name": "com.example.attune_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXCnDDJ_K1qqMT4Ce26KkzUm-c7R3sqrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

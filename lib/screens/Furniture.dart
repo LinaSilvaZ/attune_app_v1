@@ -2,25 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:grouped_list/grouped_list.dart';
 
-class Housing extends StatefulWidget {
-  const Housing({super.key});
+class Furniture extends StatefulWidget {
+  const Furniture({super.key});
 
   @override
-  State<Housing> createState() => _HousingState();
+  State<Furniture> createState() => _FurnitureState();
 }
 
-class _HousingState extends State<Housing> {
+class _FurnitureState extends State<Furniture> {
   @override
   Widget build(BuildContext context) {
     List _elements = [
-      {'name': 'Richie Rich', 'category': 'Building Owners'},
-      {'name': 'Donald Duck', 'category': 'Building Owners'},
-      {'name': 'Scrooge McDuck', 'category': 'Building Owners'},
-      {'name': 'Tony Stark', 'category': 'Rental Agent'},
-      {'name': 'Bruce Wayne', 'category': 'Rental Agent'},
+      {'name': 'Ikea', 'category': 'Furnishing Brand'},
+      {'name': 'The Brick', 'category': 'Furnishing Brand'},
+      {'name': 'La-Z-Boy', 'category': 'Furnishing Brand'},
       {'name': 'Market Place', 'category': 'Websites'},
       {'name': 'Kijiji', 'category': 'Websites'},
-      {'name': 'Market Place Homes', 'category': 'Websites'}
+      {'name': 'Value Village', 'category': 'Second Hand Furniture'},
+      {'name': 'Thrift Store', 'category': 'Second Hand Furniture'},
     ];
 
     return Scaffold(
@@ -30,7 +29,7 @@ class _HousingState extends State<Housing> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text(
-                "Housing",
+                "Furniture",
                 style: TextStyle(
                     color: Colors.white70,
                     fontSize: 36,

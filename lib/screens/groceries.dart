@@ -2,25 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:grouped_list/grouped_list.dart';
 
-class Housing extends StatefulWidget {
-  const Housing({super.key});
+class Groceries extends StatefulWidget {
+  const Groceries({super.key});
 
   @override
-  State<Housing> createState() => _HousingState();
+  State<Groceries> createState() => _GroceriesState();
 }
 
-class _HousingState extends State<Housing> {
+class _GroceriesState extends State<Groceries> {
   @override
   Widget build(BuildContext context) {
     List _elements = [
-      {'name': 'Richie Rich', 'category': 'Building Owners'},
-      {'name': 'Donald Duck', 'category': 'Building Owners'},
-      {'name': 'Scrooge McDuck', 'category': 'Building Owners'},
-      {'name': 'Tony Stark', 'category': 'Rental Agent'},
-      {'name': 'Bruce Wayne', 'category': 'Rental Agent'},
-      {'name': 'Market Place', 'category': 'Websites'},
-      {'name': 'Kijiji', 'category': 'Websites'},
-      {'name': 'Market Place Homes', 'category': 'Websites'}
+      {'name': 'Walmart', 'category': 'Hypermarkets'},
+      {'name': 'Real Canadian Superstore', 'category': 'Hypermarkets'},
+      {'name': 'FreshCo', 'category': 'Supermarkets'},
+      {'name': 'Save On Foods', 'category': 'Supermarkets'},
+      {'name': 'Sobeys', 'category': 'Supermarkets'},
+      {'name': 'Co-op Food Store', 'category': 'Supermarkets'},
+      {'name': 'Costco', 'category': 'Club Retail Stores'},
+      {'name': 'Dollarama', 'category': 'Retail Chain'},
+      {'name': 'Liquidation Store', 'category': 'Retail Chain'},
+      {'name': 'Red Deer Food Bank', 'category': 'Food Bank'},
     ];
 
     return Scaffold(
@@ -30,7 +32,7 @@ class _HousingState extends State<Housing> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text(
-                "Housing",
+                "Groceries",
                 style: TextStyle(
                     color: Colors.white70,
                     fontSize: 36,
@@ -63,7 +65,7 @@ class _HousingState extends State<Housing> {
               child: ListTile(
                 contentPadding: const EdgeInsets.symmetric(
                     horizontal: 20.0, vertical: 10.0),
-                leading: const Icon(Icons.contact_mail),
+                leading: const Icon(Icons.contact_page_rounded),
                 title: Text(element['name']),
                 trailing: const Icon(Icons.arrow_forward_rounded),
               ),

@@ -24,35 +24,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blueGrey,
       ),
-      /*theme: ThemeData(
-        textTheme: GoogleFonts.glutenTextTheme(
-          Theme.of(context).textTheme,
-        ),
-      ),*/
-      /*theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-        textTheme: GoogleFonts.lobsterTextTheme(Theme.of(context).textTheme),
-      ),*/
       onGenerateRoute: route.controller,
       initialRoute: route.authGate,
-      /*home: Scaffold(
-        body: Container(
-          decoration: const BoxDecoration(
-            color: Color.fromRGBO(103, 134, 183, 1),
-            //gradient: RadialGradient.
-          ),
-        ),
-      ),*/
     );
   }
-  /*Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Routing Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-      ),
-      onGenerateRoute: route.controller,
-      initialRoute: route.authGate,
-    );
-  }*/
 }

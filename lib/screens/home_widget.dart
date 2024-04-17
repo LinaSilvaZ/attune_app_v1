@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:gridview_menu/gridview_menu.dart';
 //For the authentication page
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
-//import 'package:firebase_core/firebase_core.dart';
 //To use google fonts
 //import 'package:google_fonts/google_fonts.dart';
 //To set the different routes for out project
-//import 'package:flutter_project/route/route.dart' as route;
+import 'package:flutter_project/route/route.dart' as route;
 
 class HomeWidget extends StatefulWidget {
   final List<MenuItem>? menuItem;
@@ -18,7 +17,7 @@ class HomeWidget extends StatefulWidget {
 }
 
 class _HomeWidgetState extends State<HomeWidget> {
-  //final bool _showList = false; // False shows a grid view or List view if its true
+  bool _showList = false; // False shows a grid view or List view if its true
 
   @override
   void initState() {
@@ -40,25 +39,8 @@ class _HomeWidgetState extends State<HomeWidget> {
                     fontSize: 36,
                     fontWeight: FontWeight.w500),
               ),
-              /* actions: <Widget>[
-          IconButton(
-            icon: Icon(_showList ? Icons.grid_on : Icons.grid_off),
-            onPressed: () {
-              if (mounted) {
-                setState(() {
-                  _showList = !_showList;
-                });
-              }
-            },
-          ),
-        ],*/
               SignOutButton(),
             ]),
-      ),
-      /*title: const FittedBox(
-          fit: BoxFit.fitWidth,
-          child: Text('Bienvenid@'),
-        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(_showList ? Icons.grid_on : Icons.grid_off),
@@ -70,17 +52,17 @@ class _HomeWidgetState extends State<HomeWidget> {
               }
             },
           ),
-        ],*/
-
-      /*body: MobileSidebar(
+        ],
+      ),
+      body: MobileSidebar(
         breakPoint: 3000,
         items: widget.menuItem!,
         showList: _showList,
-      ),*/
+      ),
       /*the bottomNavigationBar help us to stablish in which screen will be set up. For this case it would 
       be the Index 0 -> Home. 
       The other options that user can pressed are 'Select City' */
-      /*bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
           backgroundColor: const Color.fromRGBO(103, 134, 183, 1),
           currentIndex: 0,
           items: const [
@@ -89,13 +71,13 @@ class _HomeWidgetState extends State<HomeWidget> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.email),
+              icon: Icon(Icons.location_city_rounded),
               label: 'Select City',
             ),
-            BottomNavigationBarItem(
+            /*  BottomNavigationBarItem(
               icon: Icon(Icons.person),
               label: 'About Us',
-            ),
+            ),*/
           ],
           onTap: (int index) {
             switch (index) {
@@ -105,11 +87,11 @@ class _HomeWidgetState extends State<HomeWidget> {
               case 1:
                 Navigator.pushNamed(context, route.selectCity);
                 break;
-              case 2:
+              /*case 2:
                 Navigator.pushNamed(context, route.aboutUs);
-                break;
+                break;*/
             }
-          }),*/
+          }),
     );
   }
 }

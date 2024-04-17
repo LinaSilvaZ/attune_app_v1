@@ -2,25 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:grouped_list/grouped_list.dart';
 
-class Housing extends StatefulWidget {
-  const Housing({super.key});
+class Events extends StatefulWidget {
+  const Events({super.key});
 
   @override
-  State<Housing> createState() => _HousingState();
+  State<Events> createState() => _EventsState();
 }
 
-class _HousingState extends State<Housing> {
+class _EventsState extends State<Events> {
   @override
   Widget build(BuildContext context) {
     List _elements = [
-      {'name': 'Richie Rich', 'category': 'Building Owners'},
-      {'name': 'Donald Duck', 'category': 'Building Owners'},
-      {'name': 'Scrooge McDuck', 'category': 'Building Owners'},
-      {'name': 'Tony Stark', 'category': 'Rental Agent'},
-      {'name': 'Bruce Wayne', 'category': 'Rental Agent'},
-      {'name': 'Market Place', 'category': 'Websites'},
-      {'name': 'Kijiji', 'category': 'Websites'},
-      {'name': 'Market Place Homes', 'category': 'Websites'}
+      {'name': 'Teddy Bear Adventure Preschool Camp', 'date': 'April 20, 2024'},
+      {
+        'name': 'Stand Up Comedy - Allyson June, Corey Mack',
+        'date': 'April 20, 2024'
+      },
+      {'name': 'Red Deer Career Fair', 'date': 'April 18, 2024'},
     ];
 
     return Scaffold(
@@ -30,7 +28,7 @@ class _HousingState extends State<Housing> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Text(
-                "Housing",
+                "Events",
                 style: TextStyle(
                     color: Colors.white70,
                     fontSize: 36,
@@ -41,7 +39,7 @@ class _HousingState extends State<Housing> {
       ),
       body: GroupedListView<dynamic, String>(
         elements: _elements,
-        groupBy: (element) => element['category'],
+        groupBy: (element) => element['date'],
         groupComparator: (value1, value2) => value2.compareTo(value1),
         itemComparator: (item1, item2) =>
             item1['name'].compareTo(item2['name']),
